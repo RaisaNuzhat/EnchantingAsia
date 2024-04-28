@@ -19,6 +19,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        loader:() => fetch('http://localhost:5000/spots'),
         element: <Home />,
       },
       {
@@ -31,6 +32,13 @@ export const router = createBrowserRouter([
       },
       {
         path: '/addspot',
+        element:< Privateroute>
+        <AddSpot />,
+        </Privateroute>
+        
+      },
+      {
+        path: '/viewdetails',
         element:< Privateroute>
         <AddSpot />,
         </Privateroute>
