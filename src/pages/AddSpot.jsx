@@ -1,13 +1,60 @@
-
+import Swal from 'sweetalert2'
 
 const AddSpot = () => {
+    const handleAddSpot = (e) =>
+    {
+        e.preventDefault()
+        const form = e.target
+        const spotname = form.spotname.value
+        const countryname = form.countryname.value
+        const image = form.image.value
+        const location = form.location.value
+        const description = form.description.value;
+        const cost = form.cost.value;
+        const traveltime = form.traveltime.value;
+        const season = form.season.value;
+        const totalvisitors = form.totalvisitors.value;
+        const name = form.name.value;
+        const email = form.email.value;
+        const newspot= {spotname,countryname,image,location,description,cost,traveltime,season,totalvisitors,name,email}
+        console.log(newspot)
+       //send data to server
+       fetch('http://localhost:5000/spots',
+       {
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(newspot)
+       })
+
+       .then( 
+        res =>
+         res.json()
+       )
+       .then(data=>
+    {
+        console.log(data)
+        if(data.insertedId)
+        {
+            Swal.fire({
+                title: 'Yayy!',
+                text: 'Spot added successfully!',
+                icon: 'success',
+                confirmButtonText: 'Okay'
+              })
+        }
+    })
+
+
+    }
     return (
         <div className="my-10 mx-auto container">
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col flex 1 w-full">
                   
                     <div className="card  w-full max-w-sm shadow-2xl ">
-                        <form className="card-body w-full">
+                        <form onSubmit={handleAddSpot} className="card-body w-full">
                             <div className="form-control font-Montserrat ">
                                 <label className="label">
                                     <span className="label-text">Spot Name</span>
@@ -61,7 +108,7 @@ const AddSpot = () => {
                                 <label className="label">
                                     <span className="label-text">Total Visitors Per Year</span>
                                 </label>
-                                <input type="number" name="totalvisitors" placeholder="Total Visitors" className="input input-bordered" required />
+                                <input type="text" name="totalvisitors" placeholder="Total Visitors" className="input input-bordered" required />
                                
                             </div>
                             <div className="form-control">
