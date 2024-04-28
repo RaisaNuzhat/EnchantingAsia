@@ -4,6 +4,8 @@ import Home from '../pages/Home';
 import ErrorPage from '../components/ErrorPage';
 import LogIn from '../pages/LogIn';
 import Register from '../pages/Register';
+import AddSpot from '../pages/AddSpot';
+import Privateroute from '../components/Privateroute/Privateroute';
 
 
 //import PrivateRoute from '../components/Privateroute/PrivateRoute';
@@ -26,6 +28,13 @@ export const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />,
+      },
+      {
+        path: '/addspot',
+        element:< Privateroute>
+        <AddSpot />,
+        </Privateroute>
+        
       },
       
       
