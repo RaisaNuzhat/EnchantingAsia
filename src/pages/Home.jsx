@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import SpotCard from "../components/SpotCard";
 import Banner from "../components/Banner";
 import Travel from "../components/Travel";
+import TravelTipsSection from "../components/TravelTips";
 
 
 const Home = () => {
@@ -22,10 +23,14 @@ const Home = () => {
              </div>
 
             </div>
-            
+
             <div className="w-1/3 ">
             <Travel/>
             </div>
+            <div className="mx-auto my-3 ">
+            <TravelTipsSection/>
+            </div>
+            
            
             
         </div>
