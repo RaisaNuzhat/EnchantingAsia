@@ -6,6 +6,9 @@ import LogIn from '../pages/LogIn';
 import Register from '../pages/Register';
 import AddSpot from '../pages/AddSpot';
 import Privateroute from '../components/Privateroute/Privateroute';
+import MyList from '../pages/MyList';
+import ViewDetails from '../pages/ViewDetails';
+import AllTouristSpots from '../pages/AllTouristSpots';
 
 
 //import PrivateRoute from '../components/Privateroute/PrivateRoute';
@@ -38,12 +41,30 @@ export const router = createBrowserRouter([
         
       },
       {
-        path: '/viewdetails',
+        path: '/viewdetails/:id',
         element:< Privateroute>
-        <AddSpot />,
+        <ViewDetails />
+        </Privateroute>,
+        loader:({params}) => fetch(`http://localhost:5000/spots/${params.id}`),
+       
+        
+      },
+      {
+        path: '/mylist',
+        element:< Privateroute>
+        <MyList />,
         </Privateroute>
         
       },
+      {
+        path: '/alltouristspot',
+        loader:() => fetch('http://localhost:5000/spots'),
+        element:< Privateroute>
+        <AllTouristSpots />,
+        </Privateroute>
+        
+      },
+      
       
       
       

@@ -35,9 +35,9 @@ const NavBar = () => {
                 {/* routes */}
                 <div className="flex-1 gap-4 justify-evenly">
                 <NavLink to='/' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>Home</NavLink>
-                    <NavLink to='' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>All Tourists Spot</NavLink>
+                    <NavLink to='/alltouristspot' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>All Tourists Spot</NavLink>
                     <NavLink to='/addspot' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>Add Spot</NavLink>
-                    <NavLink to='' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>My List</NavLink>
+                    <NavLink to='/mylist' className={({ isActive }) => isActive ? 'text-[#bbe4e9] lg:font-bold' : 'text-white lg:font-bold'}>My List</NavLink>
                 {/* routes */}
                     {/* theme */}
 
