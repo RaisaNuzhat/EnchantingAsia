@@ -20,7 +20,9 @@ const Home = () => {
                 </SpotCard>)
             }
              </div>
+
             </div>
+            
             <div className="w-1/3 ">
             <Travel/>
             </div>
