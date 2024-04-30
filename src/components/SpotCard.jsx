@@ -12,7 +12,7 @@ const SpotCard = ({ spot }) => {
                     <h2 className="card-title  font-Montserrat lg:text-2xl text-xl font-bold">{location}</h2>
                     <p className="lg:text-[20px] text-[16px] font-Montserrat font-medium">{description}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/viewdetails/${_id}`} className="btn  bg-[#79c2d0] text-2xl font-medium text-white">View Details</Link>
+                        <Link to={`/viewdetails/${_id}`} className="btn  bg-[#79c2d0] lg:text-xl text-[14px] font-medium text-white">View Details</Link>
                     </div>
                 </div>
             </div>
