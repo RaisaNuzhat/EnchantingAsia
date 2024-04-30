@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import { AuthContext } from "../firebaseprovider/FirebaseProvider";
 import { useEffect,useState } from "react";
 
 
 
 const NavBar = () => {
+
     const { logOut, user } = useContext(AuthContext);
     const [theme,setTheme] = useState('light')
     useEffect( ()=>

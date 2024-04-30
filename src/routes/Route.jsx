@@ -9,6 +9,7 @@ import Privateroute from '../components/Privateroute/Privateroute';
 import MyList from '../pages/MyList';
 import ViewDetails from '../pages/ViewDetails';
 import AllTouristSpots from '../pages/AllTouristSpots';
+import Update from '../pages/Update';
 
 
 //import PrivateRoute from '../components/Privateroute/PrivateRoute';
@@ -52,8 +53,15 @@ export const router = createBrowserRouter([
       {
         path: '/mylist',
         element:< Privateroute>
-        <MyList />,
-        </Privateroute>
+        <MyList />
+        </Privateroute>,
+        
+      },
+      {
+        path: '/update',
+        element:< Privateroute>
+        <Update />
+        </Privateroute>,
         
       },
       {
@@ -64,16 +72,6 @@ export const router = createBrowserRouter([
         </Privateroute>
         
       },
-      
-      
-      
-      
-     
-
-      
-
-
-
     ]
   }
 
