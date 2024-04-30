@@ -1,9 +1,9 @@
 
 # B9 A10 Type-01 
 
-# MyTravelWebsite
+# EnchantingAsia
 
-Welcome to MyTravelWebsite, a platform designed to inspire and assist travelers in exploring the wonders of the world. Whether you're planning your next adventure or simply seeking inspiration, MyTravelWebsite offers a wealth of resources and features to help you make the most of your travels.
+Welcome to EnchantingAsia, a platform designed to inspire and assist travelers in exploring the wonders of the world. Whether you're planning your next adventure or simply seeking inspiration, EnchantingAsia offers a wealth of resources and features to help you make the most of your travels.
 
 ## Features
 
