@@ -1,10 +1,32 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-
+import Swal from "sweetalert2";
 
 const MyTable = ({ item }) => {
     console.log(item)
-    //const { spotname, countryname,  cost} = viewspot
+ 
+    const handleDelete = _id =>
+    {
+       console.log(_id)
+       Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+        //   Swal.fire({
+        //     title: "Deleted!",
+        //     text: "Your file has been deleted.",
+        //     icon: "success"
+        //   });
+        console.log('delete hoise')
+        }
+      });
+    }
     return (
         <div>
             <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
@@ -37,12 +59,12 @@ const MyTable = ({ item }) => {
 
 
                                 <td className="px-3 py-2 w-1/5 text-xl font-medium dark:text-gray-600">
-                                    <Link to='/update' className="btn  bg-[#79c2d0] text-xl font-medium text-white">Update</Link>
+                                    <Link to={`/update/${item._id}`}  className="btn  bg-[#79c2d0] text-xl font-medium text-white">Update</Link>
 
                                 </td>
 
                                 <td className="px-3 py-2 w-1/5 text-xl font-medium dark:text-gray-600">
-                                    <button className="btn  bg-[#79c2d0] text-xl font-medium text-white">Delete</button> 
+                                    <button onClick={() => handleDelete(item._id)} className="btn  bg-[#79c2d0] text-xl font-medium text-white">Delete</button> 
 
                                 </td>
 
