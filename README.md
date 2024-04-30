@@ -20,7 +20,7 @@ Welcome to MyTravelWebsite, a platform designed to inspire and assist travelers 
 6. **Responsive Design**: Access MyTravelWebsite from any device, as the website is fully responsive and optimized for desktops, tablets, and mobile phones.
 
  **Packages used**: 
-   **react-simple-typewriter**
+   **react-simple-typewriter** ,
    **Lottie React**
 
 
