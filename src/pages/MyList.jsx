@@ -9,7 +9,8 @@ const MyList = () => {
     console.log(user)
     const [item,setItem] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/spot/${user?.email}`)
+        fetch(`https://assignment-10-server-psi-rouge.vercel.app
+/spot/${user?.email}`)
         .then( (res) => res.json())
         .then ((data)=>
     {

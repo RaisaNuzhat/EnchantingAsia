@@ -24,7 +24,8 @@ const MyTable = ({ item }) => {
         //     icon: "success"
         //   });
         console.log('delete hoise')
-        fetch(`http://localhost:5000/spot/${_id}`,
+        fetch(`https://assignment-10-server-psi-rouge.vercel.app
+/spot/${_id}`,
     {
         method:'DELETE',
      

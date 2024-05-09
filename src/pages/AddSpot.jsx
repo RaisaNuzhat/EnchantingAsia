@@ -19,7 +19,7 @@ const AddSpot = () => {
         const newspot= {spotname,countryname,image,location,description,cost,traveltime,season,totalvisitors,name,email}
         console.log(newspot)
        //send data to server
-       fetch('http://localhost:5000/spots',
+       fetch('https://assignment-10-server-psi-rouge.vercel.app/spots',
        {
         method:'POST',
         headers:{

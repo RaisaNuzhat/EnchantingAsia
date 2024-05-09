@@ -20,7 +20,8 @@ const Update = () => {
         const updatedspot= {spotname,countryname,image,location,description,cost,traveltime,season,totalvisitors}
         console.log(updatedspot)
        //send data to server
-       fetch(`http://localhost:5000/spot/${_id}`,
+       fetch(`https://assignment-10-server-psi-rouge.vercel.app
+/spot/${_id}`,
        {
         method:'PUT',
         headers:{

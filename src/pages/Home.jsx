@@ -13,7 +13,7 @@ const Home = () => {
             <Banner/>
             <div className="my-3">
             <h3 className="text-center text-2xl font-Montserrat font-semibold">Tourist Spots</h3>
-             <div className="grid  grid-cols-2 gap-4 ">
+             <div className="grid  lg:grid-cols-2  grid-cols-1 gap-4 ">
              {
                 spots.map(spot => <SpotCard
                  key={spot._id}

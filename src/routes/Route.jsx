@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        loader:() => fetch('http://localhost:5000/spots'),
+        loader:() => fetch('https://assignment-10-server-psi-rouge.vercel.app/spots'),
         element: <Home />,
       },
       {
@@ -46,7 +46,7 @@ export const router = createBrowserRouter([
         element:< Privateroute>
         <ViewDetails />
         </Privateroute>,
-        loader:({params}) => fetch(`http://localhost:5000/spots/${params.id}`),
+        loader:({params}) => fetch(`https://assignment-10-server-psi-rouge.vercel.app/spots/${params.id}`),
        
         
       },
@@ -62,11 +62,11 @@ export const router = createBrowserRouter([
         element:< Privateroute>
         <Update />
         </Privateroute>,
-        loader:({params}) => fetch(`http://localhost:5000/spots/${params.id}`),
+        loader:({params}) => fetch(`https://assignment-10-server-psi-rouge.vercel.app/spots/${params.id}`),
       },
       {
         path: '/alltouristspot',
-        loader:() => fetch('http://localhost:5000/spots'),
+        loader:() => fetch('https://assignment-10-server-psi-rouge.vercel.app/spots'),
         element:
         <AllTouristSpots />,
         
