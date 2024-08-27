@@ -20,5 +20,8 @@ Welcome to EnchantingAsia, a platform designed to inspire and assist travelers i
  **Packages used**: 
    **react-simple-typewriter** ,
    **Lottie React**
+**Technologies**
+-**React.Js**
+-**MongoDB**
 
-# Live Link:https://my-10th-assignment-2e9ac.web.app 
+** Live Link:https://my-10th-assignment-2e9ac.web.app **
